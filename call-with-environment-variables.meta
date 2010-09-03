@@ -1,0 +1,5 @@
+((egg "call-with-environment-variables.egg")
+ (needs setup-helper)
+ (author "Peter Danenberg")
+ (files "call-with-environment-variables.scm"
+        "call-with-environment-variables.setup"))

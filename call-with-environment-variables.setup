@@ -1,0 +1,7 @@
+(include "setup-helper")
+
+(verify-extension-name "call-with-environment-variables")
+
+(setup-shared-extension-module
+ 'call-with-environment-variables
+ (extension-version 0.1))
