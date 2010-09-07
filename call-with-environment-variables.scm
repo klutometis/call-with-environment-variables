@@ -2,7 +2,7 @@
  call-with-environment-variables
  (call-with-environment-variables)
 
- (include scheme chicken)
+ (import scheme chicken posix)
 
  (define (call-with-environment-variables variables thunk)
   (let ((pre-existing-variables
