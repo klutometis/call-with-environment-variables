@@ -2,7 +2,7 @@
  call-with-environment-variables
  (call-with-environment-variables)
 
- (import scheme chicken posix)
+ (import scheme chicken)
 
  (define (call-with-environment-variables variables thunk)
   (let ((pre-existing-variables
@@ -13,6 +13,7 @@
     (dynamic-wind
         (lambda () (void))
         (lambda ()
+          (use posix)
           (for-each (lambda (var-value)
                       (setenv (car var-value) (cdr var-value)))
                     variables)
