@@ -8,6 +8,5 @@
  compile-options: '(-X cock))
 
 (run (cock -o call-with-environment-variables.wiki
-           call-with-environment-variables.scm
            call-with-environment-variables-core.scm "||"
            echo cock not "installed:" not creating documentation))

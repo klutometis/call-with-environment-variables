@@ -1,3 +1,9 @@
+@(title "call-with-environment-variables")
+@(description "Dynamic-wind for the environment")
+@(author "Peter Danenberg")
+@(email "pcd@roxygen.org")
+@(username "klutometis")
+
 (define (call-with-environment-variables variables thunk)
   @("Sets up environment variable via dynamic-wind which are taken down after thunk."
     (variables "An alist of the form '((\"var\" . \"value\") ...)")

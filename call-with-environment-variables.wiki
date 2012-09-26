@@ -1,6 +1,6 @@
-== Title
+== call-with-environment-variables
 
-Description
+Dynamic-wind for the environment
 [[toc:]]
 === {{call-with-environment-variables}}
 <procedure>(call-with-environment-variables variables thunk) → unspecified</procedure>
@@ -32,7 +32,7 @@ Sets up environment variable via dynamic-wind which are taken down after thunk.
 
 ==== Author
 
-[[/users/anonymous|Anonymous]]
+[[/users/klutometis|Peter Danenberg]]
 ==== Colophon
 
 Documented by [[/egg/cock|cock]].
