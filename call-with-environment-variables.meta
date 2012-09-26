@@ -1,6 +1,8 @@
-((egg "call-with-environment-variables.egg")
- (needs cock
-        setup-helper)
+((synopsis "Set up and take down environment vars")
  (author "Peter Danenberg")
- (files "call-with-environment-variables.scm"
-        "call-with-environment-variables.setup"))
+ (category os)
+ (license "BSD")
+ (depends cock
+          setup-helper)
+ (test-depends test)
+ (foreign-depends))
