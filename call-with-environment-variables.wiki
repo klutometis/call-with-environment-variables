@@ -1,0 +1,38 @@
+== Title
+
+Description
+[[toc:]]
+=== {{call-with-environment-variables}}
+<procedure>(call-with-environment-variables variables thunk) → unspecified</procedure>
+Sets up environment variable via dynamic-wind which are taken down after thunk.
+; variables : An alist of the form '(("var" . "value") ...)
+; thunk : The thunk to execute with a modified environment
+<enscript highlight="scheme">(define (call-with-environment-variables variables thunk)
+  (let ((pre-existing-variables
+          (map (lambda (var-value)
+                 (let ((var (car var-value)))
+                   (cons var (get-environment-variable var))))
+               variables)))
+    (dynamic-wind
+      (lambda () (void))
+      (lambda ()
+        (use posix)
+        (for-each
+          (lambda (var-value) (setenv (car var-value) (cdr var-value)))
+          variables)
+        (thunk))
+      (lambda ()
+        (for-each
+          (lambda (var-value)
+            (let ((var (car var-value)) (value (cdr var-value)))
+              (if value (setenv var value) (unsetenv var))))
+          pre-existing-variables)))))
+</enscript>
+=== About this egg
+
+==== Author
+
+[[/users/anonymous|Anonymous]]
+==== Colophon
+
+Documented by [[/egg/cock|cock]].
