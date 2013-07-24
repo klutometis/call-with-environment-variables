@@ -1,11 +1,11 @@
-== call-with-environment-variables
+== title
 
 Dynamic-wind for the environment
 [[toc:]]
 === {{call-with-environment-variables}}
 <procedure>(call-with-environment-variables variables thunk) → unspecified</procedure>
 Sets up environment variable via dynamic-wind which are taken down after thunk.
-; variables : An alist of the form '(("var" . "value") ...)
+; variables : An alist of the form {{'(("var" . "value") ...)}}
 ; thunk : The thunk to execute with a modified environment
 <enscript highlight="scheme">(define (call-with-environment-variables variables thunk)
   (let ((pre-existing-variables
