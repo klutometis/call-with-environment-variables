@@ -6,7 +6,7 @@
 
 (define (call-with-environment-variables variables thunk)
   @("Sets up environment variable via dynamic-wind which are taken down after thunk."
-    (variables "An alist of the form '((\"var\" . \"value\") ...)")
+    (variables "An alist of the form {{'((\"var\" . \"value\") ...)}}")
     (thunk "The thunk to execute with a modified environment"))
   (let ((pre-existing-variables
          (map (lambda (var-value)
