@@ -33,6 +33,20 @@ Sets up environment variable via dynamic-wind which are taken down after thunk.
 ==== Author
 
 [[/users/klutometis|Peter Danenberg]]
+
+==== License
+BSD
+==== Dependencies
+* [[cock]]
+* [[setup-helper]]
+
+==== Versions
+; 0.1 : Initial release
+; 0.1.1 : Add the actual code.
+; 0.1.2 : Fix versions.
+; 0.1.3 : Update docs.
+; 0.1.4 : With a note about cock-utils
+; 0.1.5 : Docs
 ==== Colophon
 
 Documented by [[/egg/cock|cock]].
