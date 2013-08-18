@@ -1,6 +1,6 @@
-== title
+== call-with-environment-variables
 
-Dynamic-wind for the environment
+Set up and take down environment vars
 [[toc:]]
 === {{call-with-environment-variables}}
 <procedure>(call-with-environment-variables variables thunk) → unspecified</procedure>
@@ -33,7 +33,8 @@ Sets up environment variable via dynamic-wind which are taken down after thunk.
 ==== Author
 
 [[/users/klutometis|Peter Danenberg]]
-
+==== Repository
+[[https://github.com/klutometis/call-with-environment-variables]]
 ==== License
 BSD
 ==== Dependencies
