@@ -5,7 +5,7 @@
  (repo "https://github.com/klutometis/call-with-environment-variables")
  (category os)
  (license "BSD")
- (depends hahn
+ (depends (hahn "0.9.3")
           setup-helper)
  (test-depends test)
  (foreign-depends))
