@@ -1,13 +1,10 @@
-(include "setup-helper")
+(use hahn setup-helper-mod)
 
 (verify-extension-name "call-with-environment-variables")
 
 (setup-shared-extension-module
  'call-with-environment-variables
- (extension-version "0.1.5")
- compile-options: '(-X cock))
+ (extension-version "0.1.6")
+ compile-options: '(-X hahn))
 
-(handle-exceptions exn
-  (warning "Not generating documentation")
-  (include "setup-helper-cock")
-  (run-cock -o call-with-environment-variables.wiki call-with-environment-variables-core.scm))
+(run-hahn -o call-with-environment-variables.wiki call-with-environment-variables-core.scm)

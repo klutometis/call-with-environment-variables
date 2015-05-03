@@ -5,8 +5,8 @@ Set up and take down environment vars
 === {{call-with-environment-variables}}
 <procedure>(call-with-environment-variables variables thunk) → unspecified</procedure>
 Sets up environment variable via dynamic-wind which are taken down after thunk.
-; variables : An alist of the form {{'(("var" . "value") ...)}}
-; thunk : The thunk to execute with a modified environment
+; {{variables}} : An alist of the form {{'(("var" . "value") ...)}}
+; {{thunk}} : The thunk to execute with a modified environment
 <enscript highlight="scheme">(define (call-with-environment-variables variables thunk)
   (let ((pre-existing-variables
           (map (lambda (var-value)
@@ -38,16 +38,16 @@ Sets up environment variable via dynamic-wind which are taken down after thunk.
 ==== License
 BSD
 ==== Dependencies
-* [[cock]]
+* [[hahn]]
 * [[setup-helper]]
 
 ==== Versions
-; 0.1 : Initial release
-; 0.1.1 : Add the actual code.
-; 0.1.2 : Fix versions.
-; 0.1.3 : Update docs.
-; 0.1.4 : With a note about cock-utils
-; 0.1.5 : Docs
+; [[https://github.com/klutometis/call-with-environment-variables/releases/tag/0.1|0.1]] : Initial release
+; [[https://github.com/klutometis/call-with-environment-variables/releases/tag/0.1.1|0.1.1]] : Add the actual code.
+; [[https://github.com/klutometis/call-with-environment-variables/releases/tag/0.1.2|0.1.2]] : Fix versions.
+; [[https://github.com/klutometis/call-with-environment-variables/releases/tag/0.1.3|0.1.3]] : Update docs.
+; [[https://github.com/klutometis/call-with-environment-variables/releases/tag/0.1.4|0.1.4]] : With a note about cock-utils
+; [[https://github.com/klutometis/call-with-environment-variables/releases/tag/0.1.5|0.1.5]] : Docs
 ==== Colophon
 
-Documented by [[/egg/cock|cock]].
+Documented by [[/egg/hahn|hahn]].
