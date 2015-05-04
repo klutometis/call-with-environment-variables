@@ -38,7 +38,7 @@ Sets up environment variable via dynamic-wind which are taken down after thunk.
 ==== License
 BSD
 ==== Dependencies
-* [[(hahn 0.9.3)]]
+* [[hahn]]
 * [[setup-helper]]
 
 ==== Versions
@@ -49,6 +49,7 @@ BSD
 ; [[https://github.com/klutometis/call-with-environment-variables/releases/tag/0.1.4|0.1.4]] : With a note about cock-utils
 ; [[https://github.com/klutometis/call-with-environment-variables/releases/tag/0.1.5|0.1.5]] : Docs
 ; [[https://github.com/klutometis/call-with-environment-variables/releases/tag/0.1.6|0.1.6]] : Use hahn.
+; [[https://github.com/klutometis/call-with-environment-variables/releases/tag/0.1.7|0.1.7]] : Specify hahn-version.
 ==== Colophon
 
 Documented by [[/egg/hahn|hahn]].
